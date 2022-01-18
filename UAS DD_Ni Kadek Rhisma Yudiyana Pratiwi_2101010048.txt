@@ -1,0 +1,90 @@
+Nama	: Ni Kadek Rhisma Yudiyana Pratiwi
+NIM	: 2101010048
+prodi	: Sistem Informasi ( Malam ) 
+
+
+#include <iostream>
+#include <ctime>
+   
+
+using namespace std;
+int main(){
+	int judul,jumlah;
+	string nama,kodebuku;
+	time_t now = time(0); // untuk menentukan waktu berupa jam 
+    char* dt = ctime(&now), repeat; // untuk menentukan waktu berupa hari,tgl, thn 
+    
+	do{// untuk pengulangan sistem 
+	
+	cout<<" SELAMAT DATANG DI PEMINJAMAN BUKU !\n";
+	
+	cout<<"--------------------------------------------------------------------\n";
+	cout<<"| KODE BUKU | JUDUL BUKU | JENIS BUKU | TAHUN BUKU |  HARGA BUKU   |\n";
+	cout<<"--------------------------------------------------------------------\n";
+	cout<<"|    A      |    Kancil  |   Cerpen   |    2010    |		25000	  |\n";
+	cout<<"|    B      |     Bobo   |   Majalah  |    2012    |		30000	  |\n";
+	cout<<"|    C      |   Doraemon |   Komik    |    2014    |		35000	  |\n";
+	cout<<"|    D      |    Hujan   |   Novel    |    2019    |		40000	  |\n";
+	cout<<"-------------------------------------------------------------------|\n";
+	
+	cout<<"Nama Peminjam : ";
+	cin>>nama;
+	cout<<"Masukkan Kode Buku :";
+	cin>>kodebuku;
+	cout<<"----------------------------------------------------\n";
+	if(kodebuku=="A"||kodebuku=="a"){
+		cout<<"Nama Peminjam : ";
+		cout<<nama<<endl;
+		cout<<"Meminjam Buku Berjudul : kancil \n";
+		cout<<"Buku kancil terbit tahun : 2010 \n";
+		cout<<"Buku berjenis          : Cerpen \n";
+		cout<<"Masukkan Jumlah Pinjaman Buku : ";
+		cin>>jumlah;
+		cout<<"harga buku 			  :"<<25000*jumlah<<endl;
+ 		cout <<"Waktu Dan Tanggal Peminjaman  : " << dt << endl;
+		
+	}else if(kodebuku=="B"||kodebuku=="b"){
+		cout<<"Nama Peminjam : ";
+		cout<<nama<<endl;
+		cout<<"Meminjam Buku Berjudul : Bobo \n";
+		cout<<"Buku bobo terbit tahun : 2012 \n";
+		cout<<"Buku ini berjenis      : Majalah \n";
+		cout<<"Masukkan Jumlah Pinjaman Buku :  ";
+		cin>>jumlah;
+		cout<<"harga buku             :"<<30000*jumlah<<endl;
+		cout <<"Waktu Dan Tanggal Peminjaman  : " << dt << endl;
+		
+	}else if(kodebuku=="C"||kodebuku=="c"){
+		cout<<"Nama Peminjam : ";
+		cout<<nama<<endl;
+		cout<<"Meminjam Buku Berjudul : Doraemon \n";
+		cout<<"Buku doraemon terbit tahun : 2014 \n";
+		cout<<"Buku ini berjenis      : Komik \n";
+		cout<<"Masukkan Jumlah Pinjaman Buku : ";
+		cin>>jumlah;
+		cout<<"harga buku             :"<<35000*jumlah<<endl;
+		cout <<"Waktu Dan Tanggal Peminjaman  : " << dt << endl;
+		
+	
+	}else if(kodebuku=="D"||kodebuku=="d"){
+		cout<<"Nama Peminjam : ";
+		cout<<nama<<endl;
+		cout<<"Meminjam Buku Berjudul : Hujan \n";
+		cout<<"Buku hujan terbit tahun : 2019 \n";
+		cout<<"Buku ini berjenis      : Novel \n";
+		cout<<"Masukkan Jumlah Pinjaman Buku : ";
+		cin>>jumlah;
+		cout<<"harga buku             :"<<4000*jumlah<<endl;
+		cout <<"Waktu Dan Tanggal Peminjaman  : " << dt << endl;
+		
+
+    }else{
+    	cout<<"kode yang anda masukan salah \n ";
+	}  
+	cout<<"Selamat Membaca Semoga bermanfaat\n"; 
+
+	cout<<"Ingin Menambah ? [Y/N] ";cin>>repeat;
+	system("cls");
+} while(repeat == 'Y' || repeat == 'y');
+	
+}
